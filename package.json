@@ -1,5 +1,5 @@
 {
-  "name": "your-bot",
+  "name": "pin-discord-bot",
   "version": "1.0.0",
   "description": "A Discord bot.",
   "main": "src/index.ts",

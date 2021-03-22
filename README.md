@@ -1,4 +1,4 @@
-# Your Bot
+# Pin-Discord-Bot
 
 A Discord bot.
 
