@@ -11,9 +11,9 @@ https://discordapp.com/oauth2/authorize?&client_id=[CLIENT ID]&scope=bot&permiss
 ### Create a Discord Application
 
 If you want to run the bot yourself, [create a new Discord Bot](https://discordapp.com/developers/docs/intro#bots-and-apps).
-Then rename `template.env` to `.env` and copy your token into this file. In most cases using the same token as
-`DISCORD_DEV_TOKEN` and `DISCORD_PROD_TOKEN` should be sufficient. However, if you want to work on the bot while an
-instance is running, you should create a second bot and use it's token as `DISCORD_ENV_TOKEN`.
+Then make a copy of `template.env` and call it `.env` and copy your token into this file. In most cases using the same
+token as `DISCORD_DEV_TOKEN` and `DISCORD_PROD_TOKEN` should be sufficient. However, if you want to work on the bot
+while an instance is running, you should create a second bot and use it's token as `DISCORD_ENV_TOKEN`.
 
 ### Get your invite link
 
