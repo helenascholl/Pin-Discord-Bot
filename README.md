@@ -6,6 +6,10 @@ A Discord bot.
 
 https://discordapp.com/oauth2/authorize?&client_id=823470338276589568&scope=bot&permissions=75840
 
+## Usage
+
+Reply to a message with `!pin` to trigger a poll. If it gets three or more votes, the message gets pinned.
+
 ## For Developers
 
 ### Create a Discord Application
