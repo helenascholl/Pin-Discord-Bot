@@ -1,6 +1,6 @@
 # Pin-Discord-Bot
 
-A Discord bot.
+Vote to pin messages.
 
 ## Invite the bot
 
