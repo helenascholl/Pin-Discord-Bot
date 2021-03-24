@@ -19,18 +19,23 @@ client.on('ready', () => {
 });
 
 client.on('message', async message => {
-  if (message.content === '!pin' && message.reference && message.reference.messageID) {
-    const originalMessage = await message.channel.messages.fetch(message.reference.messageID);
+  if (message.content.toLowerCase() === '!pin') {
+    if (message.reference && message.reference.messageID) {
+      const originalMessage = await message.channel.messages.fetch(message.reference.messageID);
 
-    if (originalMessage) {
-      const poll = await message.channel.send('Pin it?');
-      await poll.react('📌');
+      if (originalMessage) {
+        const poll = await message.channel.send('Pin it?');
+        await poll.react('📌');
 
-      const collected = await poll.awaitReactions(r => r.emoji.name === '📌', { time: POLL_TIME });
+        const collected = await poll.awaitReactions(r => r.emoji.name === '📌', { time: POLL_TIME });
 
-      if (collected.get('📌') && (collected.get('📌')!.count ?? 0 > MIN_VOTES)) {
-        await originalMessage.pin();
+        if (collected.get('📌') && (collected.get('📌')!.count ?? 0 > MIN_VOTES)) {
+          await originalMessage.pin();
+        }
       }
+    } else {
+      message.channel.send('Reply to the message you want to pin with `!pin`.')
+        .catch(console.error);
     }
   }
 });
